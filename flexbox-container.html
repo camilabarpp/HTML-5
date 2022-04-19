@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style type="text/css">
+      #conteudo {
+        background: #dcdcdc;
+        height: 400px;
+        display: flex;
+        flex-direction: row; (flex-direction permite alterar a direção na qual os elementos flex serão exibidos ao longo do eixo principal.)
+        flex-wrap: nowrap; (define se os itens flexíveis são forçados a ficarem na mesma linha ou se podem ser quebradas em varias linhas.)
+        justify-content: space-around; (é empregada para alinhar os elementos ao longo do eixo principal)
+        align-items: baseline; (controla o alinhamento de todos os itens no eixo transversal) */
+      }
+      /*(Controle o tamanho do item, quanto maior o valor, maior o tamanho do item)*/
+      .item1 {
+        /*flex-grow: 1;*/
+        flex-shrink: 1;
+      }
+      .item2 {
+        /*flex-grow: 2;*/
+        flex-shrink: 2;
+      }
+      .item3 {
+        flex-shrink: 5;
+      }
+      /*
+      (Controle a ordem dos itens)
+      .order1 {
+        order: 1;
+      }
+      .order2 {
+        order: 2;
+      }
+      .order3 {
+        order: 3;
+      }
+      .order4 {
+        order: 4;
+      }*/
+      .item {
+        width: 200px;
+        height: 100px;
+        background: white;
+        border: 1px solid gray;
+        margin: 10px;
+        /*(indica o tamanho inicial do flex item antes da distribuição do espaço restante)*/
+        flex-basis: auto;
+        /*(Define a capacidade de redução de tamanho do item)*/
+        flex-shrink: 1;
+        /*flex-grow: 0; (define a proporção de espaço ocupado por um item)*/
+      }
+    </style>
+    <title>Flexbox - Flexible Box Layout</title>
+  </head>
+  <body>
+    <h1>Flexbox</h1>
+    <div id="conteudo">
+      <div class="item order1">01</div>
+      <div class="item item1">02</div>
+      <div class="item item2">03</div>
+      <div class="item item3">04</div>
+    </div>
+  </body>
+</html>
